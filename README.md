@@ -1,6 +1,7 @@
 # SQL Practice
 
-This is to practice and revice on SQL. The SQL used in this project is MySQL.
+This is to learn, practice, and revice on SQL, while also use to store game data of Retro Garage.
+The SQL used in this project is MySQL.
 
 ## ERD
 
