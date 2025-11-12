@@ -63,6 +63,20 @@ CREATE TABLE Engine_Variant (
     FOREIGN KEY (FuelSupplyID) REFERENCES Engine_FuelSupply(ID)
 );
 
+CREATE TABLE Vehicle_EnginePlacement (
+    ID INT NOT NULL AUTO_INCREMENT,
+    EnginePlacement VARCHAR(8) NOT NULL,
+    PRIMARY KEY (ID),
+    UNIQUE (EnginePlacement)
+);
+
+CREATE TABLE Vehicle_WheelDrive (
+    ID INT NOT NULL AUTO_INCREMENT,
+    WheelDrive VARCHAR(8) NOT NULL,
+    PRIMARY KEY (ID),
+    UNIQUE (WheelDrive)
+);
+
 CREATE TABLE Vehicle_Rarity (
     ID INT NOT NULL AUTO_INCREMENT,
     RarityName VARCHAR(16) NOT NULL,
@@ -81,7 +95,11 @@ CREATE TABLE Vehicle_Model (
     ID INT NOT NULL AUTO_INCREMENT,
     ModelName VARCHAR(16) NOT NULL,
     ModelYear INT NOT NULL,
+    EnginePlacementID INT NOT NULL,
+    WheelDriveID INT NOT NULL,
     PRIMARY KEY (ID),
+    FOREIGN KEY (EnginePlacementID) REFERENCES Vehicle_EnginePlacement(ID),
+    FOREIGN KEY (WheelDriveID) REFERENCES Vehicle_WheelDrive(ID),
     UNIQUE (ModelName)
 );
 
