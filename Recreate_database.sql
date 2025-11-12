@@ -137,7 +137,7 @@ CREATE TABLE Vehicle (
     Mileage_KM INT DEFAULT NULL,
     Cost INT NOT NULL,
     Price INT NOT NULL,
-    Color_Shade INT NOT NULL,
+    Color_Shade INT DEFAULT NULL,
     Color_Saturation INT DEFAULT NULL,
     Color_Brightness INT DEFAULT NULL,
     Color_Transparency INT DEFAULT NULL,
